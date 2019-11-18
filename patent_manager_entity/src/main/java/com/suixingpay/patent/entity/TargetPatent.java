@@ -9,7 +9,7 @@ import lombok.Data;
  * @version: V1.0
  */
 @Data
-public class Target_patent {
+public class TargetPatent {
     /** 指标编号 **/
     private Long targetId;
     /** 专利编号 **/
