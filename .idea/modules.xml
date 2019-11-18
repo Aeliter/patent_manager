@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/patent_manager.iml" filepath="$PROJECT_DIR$/.idea/patent_manager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/patent-manager.iml" filepath="$PROJECT_DIR$/.idea/modules/patent-manager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/patent_manager_entity/patent-manager.patent_manager_entity.iml" filepath="$PROJECT_DIR$/.idea/modules/patent_manager_entity/patent-manager.patent_manager_entity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/patent_manager_entity/patent-manager.patent_manager_entity.main.iml" filepath="$PROJECT_DIR$/.idea/modules/patent_manager_entity/patent-manager.patent_manager_entity.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/patent_manager_entity/patent-manager.patent_manager_entity.test.iml" filepath="$PROJECT_DIR$/.idea/modules/patent_manager_entity/patent-manager.patent_manager_entity.test.iml" />
     </modules>
   </component>
 </project>
