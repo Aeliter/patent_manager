@@ -9,7 +9,7 @@ import lombok.Data;
  * @version: V1.0
  */
 @Data
-public class File {
+public class File { 
     /** 文件表id **/
     private Long fileId;
     /** 外键：指向流程表 **/
