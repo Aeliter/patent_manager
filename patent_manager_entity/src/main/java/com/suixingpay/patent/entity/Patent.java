@@ -36,5 +36,4 @@ public class Patent {
         /** 专利备注 **/
         private String patentComment;
 
-
 }
