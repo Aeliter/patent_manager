@@ -1,5 +1,4 @@
 package com.suixingpay.patent.entity;
-import com.oracle.webservices.internal.api.databinding.DatabindingMode;
 import lombok.Data;
 
 import java.util.Date;
