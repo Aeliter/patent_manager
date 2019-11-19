@@ -4,7 +4,7 @@ dependencies {
     //mysql驱动依赖包
     compile 'mysql:mysql-connector-java'
     //mybatis依赖包
-    compile 'org.mybatis.spring.boot:mybatis-spring-boot-starter'
+    compile 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.0.1'
     //实体类依赖
     compile project (':patent_manager_entity')
 }
