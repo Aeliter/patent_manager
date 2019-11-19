@@ -5,3 +5,4 @@ include 'patent_manager_process'
 include 'patent_manager_tools'
 include 'patent_manager_tp'
 
+include 'patent_manager_log'
