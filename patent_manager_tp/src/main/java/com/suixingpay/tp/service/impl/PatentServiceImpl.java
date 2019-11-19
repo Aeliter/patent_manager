@@ -17,6 +17,7 @@ public class PatentServiceImpl implements PatentService {
 	@Autowired
 	private PatentMapper patentRepository;
 
+
 	@Override
 	public void insertPatent(Patent patent) {
 		patentRepository.insertPatent(patent);
