@@ -1,5 +1,6 @@
 package com.suixingpay.tp.service.impl;
 
+
 import com.suixingpay.patent.entity.Patent;
 import com.suixingpay.tp.mapper.PatentMapper;
 import com.suixingpay.tp.service.PatentService;
@@ -16,7 +17,6 @@ import org.springframework.stereotype.Service;
 public class PatentServiceImpl implements PatentService {
 	@Autowired
 	private PatentMapper patentRepository;
-
 
 	@Override
 	public void insertPatent(Patent patent) {
