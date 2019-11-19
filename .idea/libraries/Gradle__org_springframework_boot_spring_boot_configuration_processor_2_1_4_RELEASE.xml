@@ -2,12 +2,15 @@
   <library name="Gradle: org.springframework.boot:spring-boot-configuration-processor:2.1.4.RELEASE">
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-configuration-processor/2.1.4.RELEASE/631c55639500c180490a28093f24b008b95e1d2a/spring-boot-configuration-processor-2.1.4.RELEASE.jar!/" />
+      <root url="jar://E:/gradleRepo/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-configuration-processor/2.1.4.RELEASE/631c55639500c180490a28093f24b008b95e1d2a/spring-boot-configuration-processor-2.1.4.RELEASE.jar!/" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-configuration-processor/2.1.4.RELEASE/6da79283a9928a056e0e42fc490be44e51d58a2a/spring-boot-configuration-processor-2.1.4.RELEASE-javadoc.jar!/" />
+      <root url="jar://E:/gradleRepo/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-configuration-processor/2.1.4.RELEASE/6da79283a9928a056e0e42fc490be44e51d58a2a/spring-boot-configuration-processor-2.1.4.RELEASE-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-configuration-processor/2.1.4.RELEASE/adc7bd2af93f8278625cdd9ba7e012765b2b7565/spring-boot-configuration-processor-2.1.4.RELEASE-sources.jar!/" />
+      <root url="jar://E:/gradleRepo/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-configuration-processor/2.1.4.RELEASE/adc7bd2af93f8278625cdd9ba7e012765b2b7565/spring-boot-configuration-processor-2.1.4.RELEASE-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

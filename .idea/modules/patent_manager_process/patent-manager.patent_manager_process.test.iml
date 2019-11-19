@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module external.linked.project.id=":patent_manager_node:test" external.linked.project.path="$MODULE_DIR$/../../../patent_manager_node" external.root.project.path="$MODULE_DIR$/../../.." external.system.id="GRADLE" external.system.module.group="com.suixingpay.patent" external.system.module.type="sourceSet" external.system.module.version="1.0.0-SNAPSHOT" type="JAVA_MODULE" version="4">
+<module external.linked.project.id=":patent_manager_process:test" external.linked.project.path="$MODULE_DIR$/../../../patent_manager_process" external.root.project.path="$MODULE_DIR$/../../.." external.system.id="GRADLE" external.system.module.group="com.suixingpay.patent" external.system.module.type="sourceSet" external.system.module.version="1.0.0-SNAPSHOT" type="JAVA_MODULE" version="4">
   <component name="FacetManager">
     <facet type="Spring" name="Spring">
       <configuration />
@@ -11,12 +11,12 @@
     </facet>
   </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
-    <output-test url="file://$MODULE_DIR$/../../../patent_manager_node/out/test/classes" />
+    <output-test url="file://$MODULE_DIR$/../../../patent_manager_process/build/classes/java/test" />
     <exclude-output />
-    <content url="file://$MODULE_DIR$/../../../patent_manager_node/src/test" />
+    <content url="file://$MODULE_DIR$/../../../patent_manager_process/src/test" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="com.suixingpay.patent.patent_manager_node.main" />
+    <orderEntry type="module" module-name="patent-manager.patent_manager_process.main" />
     <orderEntry type="library" scope="PROVIDED" name="Gradle: org.projectlombok:lombok:1.18.6" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Gradle: org.springframework.boot:spring-boot-configuration-processor:2.1.4.RELEASE" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter-web:2.1.4.RELEASE" level="project" />
@@ -56,5 +56,5 @@
     <orderEntry type="library" name="Gradle: org.slf4j:slf4j-api:1.7.26" level="project" />
     <orderEntry type="library" name="Gradle: org.apache.logging.log4j:log4j-api:2.11.2" level="project" />
   </component>
-  <component name="TestModuleProperties" production-module="com.suixingpay.patent.patent_manager_node.main" />
+  <component name="TestModuleProperties" production-module="patent-manager.patent_manager_process.main" />
 </module>

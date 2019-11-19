@@ -5,7 +5,6 @@
     <content url="file://$MODULE_DIR$/../../../patent_manager_tp">
       <excludeFolder url="file://$MODULE_DIR$/../../../patent_manager_tp/.gradle" />
       <excludeFolder url="file://$MODULE_DIR$/../../../patent_manager_tp/build" />
-      <excludeFolder url="file://$MODULE_DIR$/../../../patent_manager_tp/out" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
