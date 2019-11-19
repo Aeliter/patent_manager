@@ -1,3 +1,7 @@
 rootProject.name = 'patent-manager'
 include 'patent_manager_entity'
+include 'patent_manager_node'
+include 'patent_manager_process'
+include 'patent_manager_tools'
+include 'patent_manager_tp'
 
