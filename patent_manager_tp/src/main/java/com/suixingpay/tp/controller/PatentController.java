@@ -5,6 +5,7 @@ import com.suixingpay.tp.service.PatentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
  * @Description com.suixingpay.tp.controller
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.PostMapping;
  */
 
 @Controller
+@RequestMapping("/patent/")
 public class PatentController {
 	@Autowired
 	private PatentService patentService;
@@ -22,9 +24,11 @@ public class PatentController {
 	 * @param patent 专利对象
 	 * @return
 	 */
-	@PostMapping("/insert")
+	@PostMapping("insert")
 	public String insertPatent(Patent patent) {
 		patentService.insertPatent(patent);
-		return "forward:";  // 调到查询所有专利
+		return "forward:/";  // 调到查询所有专利
 	}
+
+	//TODO
 }
