@@ -16,4 +16,6 @@ public class Inventor {
     private Long userId;
     /** 专利主键 **/
     private Long patentId;
+    /** 发明人状态 **/
+    private Integer inventorState;
 }

@@ -1,7 +1,7 @@
 buildscript { // buildscript 不能抽取出来，只能重复写。
     ext{
-//        sxGradleHome = "http://192.168.120.68/root/gradle-scripts/raw/master/"
-        sxGradleHome = "https://raw.githubusercontent.com/iSayCheese/gradle-scripts/master/"
+        sxGradleHome = "http://192.168.120.68/root/gradle-scripts/raw/master/"
+//        sxGradleHome = "https://raw.githubusercontent.com/iSayCheese/gradle-scripts/master/"
     }
     apply from: sxGradleHome + "maven.gradle"
     apply from: sxGradleHome + "spring-cloud-greenwich.gradle" // 导入使用Spring Cloud及相应的Spring Boot版本号
@@ -37,4 +37,3 @@ subprojects {
 //bootJar {
 //    enabled = true
 //}
-
