@@ -20,4 +20,6 @@ public class Process {
     private Date processTime;
     /** 程序状态 **/
     private Integer processState;
+    /** 流程父节点 **/
+    private Integer processFatherNode;
 }

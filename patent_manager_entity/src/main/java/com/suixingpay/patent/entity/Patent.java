@@ -35,5 +35,6 @@ public class Patent {
     private Integer patentLawState;
     /** 专利备注 **/
     private String patentComment;
-
+    /** 专利状态 **/
+    private Integer patentState;
 }

@@ -16,8 +16,6 @@ public class TargetPatent {
     private Long targetId;
     /** 专利编号 **/
     private Long patentId;
-    /**指标实体类**/
-    private Target target;
-    /***专利实体类*/
-    private Patent patent;
+    /** 指标专利状态 **/
+    private Integer tpState;
 }

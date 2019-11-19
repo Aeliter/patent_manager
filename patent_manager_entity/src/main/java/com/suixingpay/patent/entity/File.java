@@ -9,7 +9,7 @@ import lombok.Data;
  * @version: V1.0
  */
 @Data
-public class File { 
+public class File {
     /** 文件表id **/
     private Long fileId;
     /** 外键：指向流程表 **/
@@ -18,4 +18,6 @@ public class File {
     private String filePath;
     /** 文件中文名 **/
     private String fileName;
+    /** 文件状态 **/
+    private Integer fileState;
 }
