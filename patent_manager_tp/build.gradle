@@ -1,3 +1,10 @@
 dependencies {
+    //springboot依赖包
     compile 'org.springframework.boot:spring-boot-starter-web'
+    //mysql驱动依赖包
+    compile 'mysql:mysql-connector-java'
+    //mybatis依赖包
+    compile 'org.mybatis.spring.boot:mybatis-spring-boot-starter'
+    //实体类依赖
+    compile project (':patent_manager_entity')
 }
