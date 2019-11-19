@@ -5,6 +5,5 @@ spring:
     url: jdbc:mysql://140.143.48.153:10044/patent_manager?characterEncoding=utf8&useSSL=true&serverTimezone=UTC
     username: root
     password: 1013842037@a
-    driver-class-name: com.mysql.cj.jdbc.Driver
-mybatis:
-  mapper-locations: classpath:mapper/*Mapper.xml
+    driver-class-name: com.mysql.jdbc.Driver
+
