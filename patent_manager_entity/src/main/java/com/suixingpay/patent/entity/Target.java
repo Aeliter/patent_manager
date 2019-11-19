@@ -14,4 +14,6 @@ public class Target {
     private Long targetId;
     /** 指标名称 **/
     private String targetName;
+    /** 指标状态 **/
+    private Integer targetState;
 }

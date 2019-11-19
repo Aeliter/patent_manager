@@ -1,5 +1,4 @@
 package com.suixingpay.patent.entity;
-import com.oracle.webservices.internal.api.databinding.DatabindingMode;
 import lombok.Data;
 
 import java.util.Date;
@@ -35,5 +34,6 @@ public class Patent {
     private Integer patentLawState;
     /** 专利备注 **/
     private String patentComment;
-
+    /** 专利状态 **/
+    private Integer patentState;
 }

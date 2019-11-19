@@ -18,4 +18,6 @@ public class File {
     private String filePath;
     /** 文件中文名 **/
     private String fileName;
+    /** 文件状态 **/
+    private Integer fileState;
 }

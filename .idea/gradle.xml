@@ -10,6 +10,10 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/patent_manager_entity" />
+            <option value="$PROJECT_DIR$/patent_manager_node" />
+            <option value="$PROJECT_DIR$/patent_manager_process" />
+            <option value="$PROJECT_DIR$/patent_manager_tools" />
+            <option value="$PROJECT_DIR$/patent_manager_tp" />
           </set>
         </option>
         <option name="useAutoImport" value="true" />
