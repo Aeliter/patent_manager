@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 server:
   port: 8888
 spring:
@@ -7,14 +6,4 @@ spring:
     username: root
     password: 1013842037@a
     driver-class-name: com.mysql.jdbc.Driver
-=======
-datasource:
-  url: jdbc:mysql://140.143.48.153:10044/patent_manager?characterEncoding=utf8&useSSL=true&serverTimezone=UTC
-  username: root
-  password: 1013842037@a
-  driver-class-name: com.mysql.jdbc.Driver
 
-
-mybatis:
-    mapper-locations: classpath:mapping/*Mapper.xml
->>>>>>> Stashed changes
