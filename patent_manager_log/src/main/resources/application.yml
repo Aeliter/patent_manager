@@ -16,7 +16,7 @@ spring:
       allow_unquoted_control_chars: true
 
 server:
-  port: 7777
+  port: 8888
 
 # 线程池配置
 thread:

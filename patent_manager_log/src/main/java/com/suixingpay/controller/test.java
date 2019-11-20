@@ -1,6 +1,6 @@
 package com.suixingpay.controller;
 
-import com.suixingpay.entity.User;
+import com.suixingpay.patent.entity.User;
 import com.suixingpay.service.TestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,9 +22,9 @@ public class test {
         HttpSession session = request.getSession();
         User user = new User();
         user.setUserId((long) 1);
-        user.setUserDepartment(24);
-        user.setUserEmail("dsfdsf");
-        user.setUserName("dsaf");
+        user.setUserDepartment(254);
+        user.setUserEmail("87rtret");
+        user.setUserName("strtesrt");
         user.setUserPassword("5451");
         user.setUserPhone("45451");
         session.setAttribute("user", user);

@@ -6,9 +6,6 @@ spring:
     username: root
     password: 1013842037@a
     driver-class-name: com.mysql.cj.jdbc.Driver
-
 mybatis:
   mapper-locations: classpath:mapper/*Mapper.xml
   type-aliases-package: com.suixingpay.patent.entity
-  configuration:
-    map-underscore-to-camel-case: true

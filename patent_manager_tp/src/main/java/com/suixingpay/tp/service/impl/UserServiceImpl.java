@@ -13,10 +13,10 @@ import org.springframework.stereotype.Service;
 public class UserServiceImpl implements UserService {
     @Autowired
     UserMapper  userMapper;
-
-    public User login(@Param("userStaff")String userStaff,@Param("passWord")String passWord) {
-        //使用md5对密码加密
-        String passwordMd5 = MD5Util.MD5Encode(passWord, "UTF-8");
-        return userMapper.login(userStaff,passwordMd5);
-    }
+   public User login(@Param("userStaff")String userStaff,@Param("passWord")String passWord)
+   {
+       //使用md5对密码加密
+       String passwordMd5 = MD5Util.MD5Encode(passWord, "UTF-8");
+       return userMapper.login(userStaff,passwordMd5);
+   }
 }

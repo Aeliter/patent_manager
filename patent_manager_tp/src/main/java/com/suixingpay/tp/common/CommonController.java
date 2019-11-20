@@ -28,7 +28,7 @@ public class CommonController {
         byte[] captchaOutputStream = null;
         ByteArrayOutputStream imgOutputStream = new ByteArrayOutputStream();
         try {
-            //生产验证码字符串并保存到session中
+            // 生产验证码字符串并保存到session中
             String verifyCode = captchaProducer.createText();
             httpServletRequest.getSession().setAttribute("verifyCode", verifyCode);
             BufferedImage challenge = captchaProducer.createImage(verifyCode);

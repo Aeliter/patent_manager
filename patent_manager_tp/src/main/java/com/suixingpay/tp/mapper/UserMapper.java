@@ -12,5 +12,5 @@ public interface UserMapper {
      * @param password`
      * @return
      */
-     User login(@Param("userStaff")String userStaff,@Param("passWord")String passWord);
+     User login(@Param("userStaff") String userStaff, @Param("passWord") String passWord);
 }

@@ -3,47 +3,40 @@ package com.suixingpay.tp.controller;
 import com.suixingpay.patent.entity.Patent;
 import com.suixingpay.tp.service.PatentService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 /**
- * @Description com.suixingpay.tp.controller
- * @Author William_Superior
- * @Date 2019/11/19 14:36
+ * @description: com.suixingpay.tp.controller
+ * @author: William_Superior
+ * @date: 2019/11/19 14:36
  */
 
 @RestController
 @RequestMapping("/patent")
 public class PatentController {
-	@Autowired
-	private PatentService patentService;
+    @Autowired
+    private PatentService patentService;
 
-	/**
-	 * 新建专利
-	 * @param patent 专利对象
-	 * @return
-	 */
-	@PostMapping("/insert")
-	public String insertPatent( Patent patent) {
-        System.out.println(patent.toString());
-		patentService.insertPatent(patent);
-		return "forward:/";  // 调到查询所有专利
-	}
-
-	/**
-	 * 提交专利
-	 * @param id
-	 * @return
-	 */
-	@PostMapping("/submit")
-	public boolean submit(Long id){
-        System.out.println("id====="+id);
-	    return patentService.submitPatent(id);
-	}
-
-	//TODO
-    @PostMapping("/test")
-    public boolean test( long patentId, int status) {
-	    return patentService.test(patentId, status);
+    /**
+     * 新建专利
+     * @param patent 专利对象T
+     * @return
+     */
+    @PostMapping("/insert")
+    public String insertPatent(Patent patent) {
+        patentService.insertPatent(patent);
+        return "forward:/";  // 调到查询所有专利
     }
+
+    @GetMapping("/select")
+    public List<Patent> selectPatentAndProcessById(Integer id) {
+        List<Patent> list = patentService.selectPatentAndProcessById(id);
+        return list;
+    }
+
 }

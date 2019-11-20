@@ -2,6 +2,7 @@ package com.suixingpay.patent.entity;
 import lombok.Data;
 
 import java.util.Date;
+import java.util.List;
 
 /**
  * yufeng
@@ -36,4 +37,5 @@ public class Patent {
     private String patentComment;
     /** 专利状态 **/
     private Integer patentState;
+    private List<Process> processes;
 }

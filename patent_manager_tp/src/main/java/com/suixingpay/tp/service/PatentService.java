@@ -2,9 +2,12 @@ package com.suixingpay.tp.service;
 
 import com.suixingpay.patent.entity.Patent;
 
+import java.util.List;
+
 public interface PatentService {
 
-	boolean insertPatent(Patent patent);
-	boolean submitPatent(Long id);
-	boolean test(long patentId, int status);
+    void insertPatent(Patent patent);
+
+    List<Patent> selectPatentAndProcessById(Integer id);
+
 }
