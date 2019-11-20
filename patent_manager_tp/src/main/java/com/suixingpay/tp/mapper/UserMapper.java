@@ -6,6 +6,7 @@ import org.apache.ibatis.annotations.Param;
 
 @Mapper
 public interface UserMapper {
+
     /**
      * 登录验证
      * @param userName

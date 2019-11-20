@@ -17,6 +17,7 @@
         <result column="patent_state" property="patentState" jdbcType="INTEGER" />
     </resultMap>
 
+
     <sql id="Base_Column_List" >
         `patent_id`,`patent_name`,`patent_number`,`patent_batch`,`patent_request_number`,`patent_date`,`user_id_technology`,`user_id_new`,`patent_applicant`,`patent_type`,`patent_law_state`,`patent_comment`,`patent_state`
     </sql>

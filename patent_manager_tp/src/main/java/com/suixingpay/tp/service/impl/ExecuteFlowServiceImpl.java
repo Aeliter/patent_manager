@@ -1,6 +1,5 @@
 package com.suixingpay.tp.service.impl;
 
-import com.suixingpay.log.logvalue.LogValue;
 import com.suixingpay.patent.entity.NodeLink;
 import com.suixingpay.patent.entity.Patent;
 import com.suixingpay.patent.entity.Process;
@@ -16,6 +15,7 @@ import java.util.Date;
 @Slf4j
 @Service
 public class ExecuteFlowServiceImpl implements ExecuteFlowService {
+
 
     @Autowired
     private ProcessMapper processMapper;

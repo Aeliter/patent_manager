@@ -4,7 +4,6 @@ import com.suixingpay.patent.entity.User;
 import com.suixingpay.tools.MD5Util;
 import com.suixingpay.tp.mapper.UserMapper;
 import com.suixingpay.tp.service.UserService;
-import org.apache.catalina.mbeans.UserMBean;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,6 +12,7 @@ import org.springframework.stereotype.Service;
 public class UserServiceImpl implements UserService {
     @Autowired
     UserMapper  userMapper;
+
 
     public User login(@Param("userStaff")String userStaff,@Param("passWord")String passWord) {
         //使用md5对密码加密

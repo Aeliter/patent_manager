@@ -1,11 +1,8 @@
 package com.suixingpay.tp.service.impl;
 
 
-import com.suixingpay.log.logvalue.LogValue;
 import com.suixingpay.patent.entity.Patent;
-import com.suixingpay.patent.entity.Process;
 import com.suixingpay.tp.mapper.PatentMapper;
-import com.suixingpay.tp.mapper.ProcessMapper;
 import com.suixingpay.tp.service.ExecuteFlowService;
 import com.suixingpay.tp.service.PatentService;
 import lombok.extern.slf4j.Slf4j;
@@ -13,7 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.Date;
 
 /**
  * @Description com.suixingpay.tp.service.impl

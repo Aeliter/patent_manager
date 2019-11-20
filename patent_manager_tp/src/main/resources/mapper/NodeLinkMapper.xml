@@ -10,6 +10,7 @@
         <result column="node_link_state" property="nodeLinkState" jdbcType="INTEGER" />
     </resultMap>
 
+
     <sql id="Base_Column_List" >
         `node_link_id`,`before_node_link`,`after_node_link`,`node_link_comment`,`node_link_state`
     </sql>

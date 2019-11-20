@@ -3,8 +3,9 @@ package com.suixingpay.tp.controller;
 import com.suixingpay.patent.entity.Patent;
 import com.suixingpay.tp.service.PatentService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @Description com.suixingpay.tp.controller
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/patent")
 public class PatentController {
+
 	@Autowired
 	private PatentService patentService;
 

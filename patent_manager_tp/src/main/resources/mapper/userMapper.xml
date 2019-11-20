@@ -14,6 +14,7 @@
         <result column="user_department" property="userDepartment" jdbcType="INTEGER" />
     </resultMap>
 
+
     <sql id="Base_Column_List" >
         `user_id`,`user_name`,`user_password`,`user_staff`,`user_phone`,`user_email`,`user_sex`,`user_state`,`user_role`,`user_department`
     </sql>

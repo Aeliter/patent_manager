@@ -6,7 +6,7 @@ import org.mybatis.spring.annotation.MapperScan;
 @MapperScan
 public interface LogMapper {
 
-    int addUserMessageLog(Log log);
+    public int addUserMessageLog(Log log);
 
 
 }

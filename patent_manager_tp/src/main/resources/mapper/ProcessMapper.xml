@@ -11,6 +11,7 @@
     </resultMap>
 
 
+
     <sql id="Base_Column_List" >
         `process_id`,`patent_id`,`process_time`,`process_state`,`process_father_node`
     </sql>

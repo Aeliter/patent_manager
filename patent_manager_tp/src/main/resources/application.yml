@@ -12,3 +12,4 @@ mybatis:
   type-aliases-package: com.suixingpay.patent.entity
   configuration:
     map-underscore-to-camel-case: true
+

@@ -14,6 +14,7 @@ import java.util.Properties;
  **/
 @Component
 public class KaptchaConfig {
+
     @Bean
     public DefaultKaptcha getDefaultKaptcha(){
         com.google.code.kaptcha.impl.DefaultKaptcha defaultKaptcha = new com.google.code.kaptcha.impl.DefaultKaptcha();

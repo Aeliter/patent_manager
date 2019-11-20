@@ -23,6 +23,7 @@ public class CommonController {
     @Autowired
     private DefaultKaptcha captchaProducer;
 
+
     @GetMapping("/common/kaptcha")
     public void defaultKaptcha(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) throws Exception {
         byte[] captchaOutputStream = null;

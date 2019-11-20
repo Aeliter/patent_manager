@@ -7,6 +7,7 @@ import org.apache.ibatis.annotations.Param;
 @Mapper
 public interface NodeLinkMapper {
 
+
     NodeLink getNextNode(@Param("id") long id, @Param("status") int status);
 
 }
