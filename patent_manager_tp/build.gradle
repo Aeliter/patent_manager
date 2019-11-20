@@ -1,3 +1,5 @@
+import com.sun.org.apache.xalan.internal.xsltc.cmdline.Compile
+
 dependencies {
     //springboot依赖包1
     compile 'org.springframework.boot:spring-boot-starter-web'
@@ -7,4 +9,8 @@ dependencies {
     compile 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.0.1'
     //实体类依赖
     compile project (':patent_manager_entity')
+    //添加工具包
+    compile project (':patent_manager_tools')
+    //添加验证码工具包
+    compile 'com.github.penggle:kaptcha:2.3.2'
 }

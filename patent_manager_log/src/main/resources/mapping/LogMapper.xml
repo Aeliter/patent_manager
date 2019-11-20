@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.suixingpay.patent.log.mapper.LogMapper">
+
+    <resultMap id="BaseResultMap" type="com.suixingpay.patent.entity.Log">
+        <result column="log_id" jdbcType="BIGINT" property="logId" />
+        <result column="log_info" jdbcType="VARCHAR" property="logInfo" />
+        <result column="log_time" jdbcType="TIMESTAMP" property="logTime" />
+        <result column="user_id" jdbcType="BIGINT" property="userId" />
+        <result column="log_type" jdbcType="INTEGER" property="logType" />
+        <result column="log_method" jdbcType="VARCHAR" property="logMethod" />
+        <result column="log_usermessage" jdbcType="VARCHAR" property="logUserMessage" />
+        <result column="log_state" jdbcType="INTEGER" property="logState" />
+    </resultMap>
+
+    <insert id="addUserMessageLog" parameterType="com.suixingpay.patent.entity.Log" useGeneratedKeys="true" keyProperty="logId">
+        insert into pm_log (log_time, log_info,
+                            user_id, log_type, log_method,
+                            log_usermessage, log_state
+                            )
+        values (#{logTime,jdbcType=TIMESTAMP}, #{logInfo,jdbcType=VARCHAR}, #{userId,jdbcType=BIGINT},
+                #{logType,jdbcType=INTEGER}, #{logMethod,jdbcType=VARCHAR}, #{logUserMessage,jdbcType=VARCHAR},
+                #{logState,jdbcType=INTEGER}
+               )
+    </insert>
+
+</mapper>
