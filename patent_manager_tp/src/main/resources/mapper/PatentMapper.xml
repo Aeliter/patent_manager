@@ -15,14 +15,38 @@
         <result column="patent_law_state" property="patentLawState" jdbcType="INTEGER" />
         <result column="patent_comment" property="patentComment" jdbcType="VARCHAR" />
         <result column="patent_state" property="patentState" jdbcType="INTEGER" />
-        <collction property="process" ofType=""></collction>
+        <collection property="processes" ofType="com.suixingpay.patent.entity.Process" autoMapping="true">
+            <id property="processId" column="process_id"/>
+            <result property="patentId" column="patent_id"/>
+            <result property="processTime" column="process_time"/>
+            <result property="processFatherNode" column="process_father_node"/>
+            <result property="processState" column="process_state"/>
+        </collection>
     </resultMap>
+
+    <!--<resultMap id="classmap" type="Classes">
+        <id property="id" column="c_id" />
+        <result property="name" column="c_name" />
+        一对多关联映射：collection
+        <collection property="students" ofType="Student">
+            <id property="id" column="s_id" />
+            <result property="name" column="s_name" />
+            <result property="sex" column="s_sex" />
+            <result property="age" column="s_age" />
+        </collection>
+    </resultMap>-->
 
     <sql id="Base_Column_List" >
         `patent_id`,`patent_name`,`patent_number`,`patent_batch`,`patent_request_number`,`patent_date`,`user_id_technology`,`user_id_new`,`patent_applicant`,`patent_type`,`patent_law_state`,`patent_comment`,`patent_state`
     </sql>
 
     <select id="selectPatentAndProcessById" parameterType="int" resultMap="patentMap">
+        select p.patent_id, target_name, target_state, patent_name, patent_request_number, patent_date, patent_applicant, process_state
+        from pm_patent p
+        left join target_patent tp on p.patent_id = tp.patent_id
+        left join pm_target t on t.target_id = tp.target_id
+        left join pm_process pp on pp.patent_id = p.patent_id
+        where p.patent_id=#{id};
 
     </select>
 

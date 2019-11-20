@@ -3,6 +3,8 @@ package com.suixingpay.tp.mapper;
 import com.suixingpay.patent.entity.Patent;
 import org.apache.ibatis.annotations.Mapper;
 
+import java.util.List;
+
 /**
  * @description:
  * @author: Aeliter
@@ -11,6 +13,9 @@ import org.apache.ibatis.annotations.Mapper;
  */
 @Mapper
 public interface PatentMapper {
+
     void insertPatent(Patent patent);
-    Patent selectPatentAndProcessById(Integer id);
+
+    List<Patent> selectPatentAndProcessById(Integer id);
+
 }

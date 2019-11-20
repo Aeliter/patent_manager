@@ -7,6 +7,8 @@ import com.suixingpay.tp.service.PatentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * @Description com.suixingpay.tp.service.impl
  * @Author William_Superior
@@ -15,16 +17,16 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class PatentServiceImpl implements PatentService {
-	@Autowired
-	private PatentMapper patentRepository;
+    @Autowired
+    private PatentMapper patentRepository;
 
-	@Override
-	public void insertPatent(Patent patent) {
-		patentRepository.insertPatent(patent);
-	}
+    @Override
+    public void insertPatent(Patent patent) {
+        patentRepository.insertPatent(patent);
+    }
 
-	@Override
-	public Patent selectPatentAndProcessById(Integer id) throws Exception {
-		return patentRepository.selectPatentAndProcessById(id);
-	}
+    @Override
+    public List<Patent> selectPatentAndProcessById(Integer id) {
+        return (List<Patent>) patentRepository.selectPatentAndProcessById(id);
+    }
 }
