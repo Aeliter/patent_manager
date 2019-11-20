@@ -1,6 +1,6 @@
 package com.suixingpay.service;
 
-import com.suixingpay.entity.User;
+import com.suixingpay.patent.entity.User;
 
 import javax.servlet.http.HttpServletRequest;
 

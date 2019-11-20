@@ -1,6 +1,6 @@
 package com.suixingpay.log.mapper;
 
-import com.suixingpay.entity.User;
+import com.suixingpay.patent.entity.User;
 import org.mybatis.spring.annotation.MapperScan;
 
 @MapperScan

@@ -1,6 +1,6 @@
 package com.suixingpay.controller;
 
-import com.suixingpay.entity.User;
+import com.suixingpay.patent.entity.User;
 import com.suixingpay.service.TestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

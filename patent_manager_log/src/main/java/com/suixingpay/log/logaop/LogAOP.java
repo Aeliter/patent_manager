@@ -4,12 +4,10 @@ import com.suixingpay.log.logvalue.ENTITYNAME;
 import com.suixingpay.log.logvalue.LogValue;
 import com.suixingpay.log.mapper.AllEntityMapper;
 import com.suixingpay.log.mapper.LogMapper;
-import com.suixingpay.entity.Log;
-import com.suixingpay.entity.User;
+import com.suixingpay.patent.entity.Log;
+import com.suixingpay.patent.entity.User;
 import org.aspectj.lang.JoinPoint;
-import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.After;
-import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
@@ -24,7 +22,7 @@ import java.util.Date;
 
 @Aspect
 @Component
-public class LogAOP{
+public class LogAOP {
 
     @Autowired
     private AllEntityMapper allEntityMapper;
@@ -44,7 +42,7 @@ public class LogAOP{
         HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
         HttpSession session = request.getSession();
         String url = request.getRequestURI();
-        User user =(User) session.getAttribute("user");
+        User user = (User) session.getAttribute("user");
         logData = new Log();
         try {
             if (user == null) {
