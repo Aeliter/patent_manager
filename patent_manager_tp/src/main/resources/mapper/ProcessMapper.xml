@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.suixingpay.tp.mapper.ProcessMapper" >
+
+    <resultMap id="BaseResultMap" type="com.suixingpay.patent.entity.Process" >
+        <id column="process_id" property="processId" jdbcType="BIGINT" />
+        <result column="patent_id" property="patentId" jdbcType="BIGINT" />
+        <result column="process_time" property="processTime" jdbcType="TIMESTAMP" />
+        <result column="process_state" property="processState" jdbcType="INTEGER" />
+        <result column="process_father_node" property="processFatherNode" jdbcType="INTEGER" />
+    </resultMap>
+
+
+    <sql id="Base_Column_List" >
+        `process_id`,`patent_id`,`process_time`,`process_state`,`process_father_node`
+    </sql>
+
+    <insert id="insertProcess" parameterType="com.suixingpay.patent.entity.Process">
+        insert into `pm_process` (`patent_id`,`process_time`,`process_state`,`process_father_node`)
+        values (#{patentId},#{processTime},#{processState},#{processFatherNode})
+    </insert>
+
+    <select id="getProcessById" parameterType="long" resultType="com.suixingpay.patent.entity.Process">
+        select
+            <include refid="Base_Column_List"/>
+        from
+            pm_process
+        where
+            patent_id=#{id}
+        order by
+            process_time
+        DESC
+            LIMIT 0,1
+    </select>
+
+</mapper>

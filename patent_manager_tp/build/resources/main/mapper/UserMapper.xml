@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.suixingpay.tp.mapper.UserMapper" >
+    <resultMap id="BaseResultMap" type="com.suixingpay.patent.entity.User" >
+        <id column="user_id" property="userId" jdbcType="BIGINT" />
+        <result column="user_name" property="userName" jdbcType="VARCHAR" />
+        <result column="user_password" property="userPassword" jdbcType="VARCHAR" />
+        <result column="user_staff" property="userStaff" jdbcType="CHAR" />
+        <result column="user_phone" property="userPhone" jdbcType="VARCHAR" />
+        <result column="user_email" property="userEmail" jdbcType="VARCHAR" />
+        <result column="user_sex" property="userSex" jdbcType="CHAR" />
+        <result column="user_state" property="userState" jdbcType="INTEGER" />
+        <result column="user_role" property="userRole" jdbcType="INTEGER" />
+        <result column="user_department" property="userDepartment" jdbcType="INTEGER" />
+    </resultMap>
+
+    <sql id="Base_Column_List" >
+        `user_id`,`user_name`,`user_password`,`user_staff`,`user_phone`,`user_email`,`user_sex`,`user_state`,`user_role`,`user_department`
+    </sql>
+
+    <select id="get" resultMap="BaseResultMap">
+        select
+            <include refid="Base_Column_List" />
+        from
+            pm_user
+    </select>
+
+</mapper>

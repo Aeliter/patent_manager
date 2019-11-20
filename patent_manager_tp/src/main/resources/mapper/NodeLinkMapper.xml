@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.suixingpay.tp.mapper.NodeLinkMapper" >
+
+    <resultMap id="BaseResultMap" type="com.suixingpay.patent.entity.NodeLink" >
+        <id column="node_link_id" property="nodeLinkId" jdbcType="BIGINT" />
+        <result column="before_node_link" property="beforeNodeLink" jdbcType="BIGINT" />
+        <result column="after_node_link" property="afterNodeLink" jdbcType="BIGINT" />
+        <result column="node_link_comment" property="nodeLinkComment" jdbcType="VARCHAR" />
+        <result column="node_link_state" property="nodeLinkState" jdbcType="INTEGER" />
+    </resultMap>
+
+    <sql id="Base_Column_List" >
+        `node_link_id`,`before_node_link`,`after_node_link`,`node_link_comment`,`node_link_state`
+    </sql>
+
+    <select id="getNextNode" resultType="com.suixingpay.patent.entity.NodeLink">
+        select
+            <include refid="Base_Column_List" />
+        from
+            pm_node_link
+        where
+            before_node_link = #{id}
+        and
+            node_link_state = #{status}
+    </select>
+</mapper>

@@ -24,6 +24,8 @@ public class Log {
     private Integer logType;
     /** 操作方法 **/
     private String logMethod;
+    /** 日志修改人信息以及修改前信息 **/
+    private String logUserMessage;
     /** 日志状态 **/
     private Integer logState;
 }

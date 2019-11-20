@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.suixingpay.patent.log.mapper.AllEntityMapper">
+
+    <resultMap id="LogResultMap" type="com.suixingpay.patent.entity.Log">
+        <result column="log_id" jdbcType="BIGINT" property="logId" />
+        <result column="log_info" jdbcType="VARCHAR" property="logInfo" />
+        <result column="log_time" jdbcType="TIMESTAMP" property="logTime" />
+        <result column="user_id" jdbcType="BIGINT" property="userId" />
+        <result column="log_type" jdbcType="INTEGER" property="logType" />
+        <result column="log_method" jdbcType="VARCHAR" property="logMethod" />
+        <result column="log_usermessage" jdbcType="VARCHAR" property="logUserMessage" />
+        <result column="log_state" jdbcType="INTEGER" property="logState" />
+    </resultMap>
+
+    <resultMap id="FileResultMap" type="com.suixingpay.patent.entity.File">
+        <result column="file_id" jdbcType="BIGINT" property="fileId" />
+        <result column="process_id" jdbcType="VARCHAR" property="processId" />
+        <result column="file_path" jdbcType="VARCHAR" property="filePath" />
+        <result column="file_name" jdbcType="INTEGER" property="fileName" />
+    </resultMap>
+
+    <resultMap id="InventorResultMap" type="com.suixingpay.patent.entity.Inventor">
+        <result column="inventor_id" jdbcType="BIGINT" property="inventorId" />
+        <result column="user_id" jdbcType="BIGINT" property="userId" />
+        <result column="patent_id" jdbcType="INTEGER" property="patentId" />
+    </resultMap>
+
+    <resultMap id="PatentResultMap" type="com.suixingpay.patent.entity.Patent" >
+        <id column="patent_id" property="patentId" jdbcType="BIGINT" />
+        <result column="patent_name" property="patentName" jdbcType="VARCHAR" />
+        <result column="patent_number" property="patentNumber" jdbcType="CHAR" />
+        <result column="patent_batch" property="patentBatch" jdbcType="CHAR" />
+        <result column="patent_request_number" property="patentRequestNumber" jdbcType="CHAR" />
+        <result column="patent_date" property="patentDate" jdbcType="TIMESTAMP" />
+        <result column="user_id_technology" property="userIdTechnology" jdbcType="INTEGER" />
+        <result column="user_id_new" property="userIdNew" jdbcType="INTEGER" />
+        <result column="patent_applicant" property="patentApplicant" jdbcType="VARCHAR" />
+        <result column="patent_type" property="patentType" jdbcType="INTEGER" />
+        <result column="patent_law_state" property="patentLawState" jdbcType="INTEGER" />
+        <result column="patent_comment" property="patentComment" jdbcType="VARCHAR" />
+        <result column="patent_state" property="patentState" jdbcType="INTEGER" />
+    </resultMap>
+
+    <resultMap id="UserResultMap" type="com.suixingpay.patent.entity.User">
+        <id column="user_id" property="userId" jdbcType="BIGINT"/>
+        <result column="user_name" property="userName" jdbcType="VARCHAR"/>
+        <result column="user_password" property="userPassword" jdbcType="VARCHAR"/>
+        <result column="user_staff" property="userStaff" jdbcType="CHAR"/>
+        <result column="user_phone" property="userPhone" jdbcType="VARCHAR"/>
+        <result column="user_email" property="userEmail" jdbcType="VARCHAR"/>
+        <result column="user_sex" property="userSex" jdbcType="CHAR"/>
+        <result column="user_state" property="userState" jdbcType="INTEGER"/>
+        <result column="user_role" property="userRole" jdbcType="INTEGER"/>
+        <result column="user_department" property="userDepartment" jdbcType="INTEGER"/>
+    </resultMap>
+
+
+
+</mapper>

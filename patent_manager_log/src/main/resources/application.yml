@@ -1,0 +1,30 @@
+#多环境通用配置
+spring:
+  mvc:
+    servlet:
+      load-on-startup: 100
+  application:
+    name: patent_manager_log
+  datasource:
+    username: root
+    password: 1013842037@a
+    url: jdbc:mysql://140.143.48.153:10044/patent_manager?characterEncoding=utf8&useSSL=true&serverTimezone=UTC&serverTimezone=GMT%2B8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jackson:
+    parser:
+      #允许出现特殊字符和转义符
+      allow_unquoted_control_chars: true
+
+server:
+  port: 7777
+
+# 线程池配置
+thread:
+  pool:
+    corePoolSize: 50
+    maxPoolSize: 100
+    queueCapacity: 30
+
+mybatis:
+  mapper-locations: classpath:mapping/*Mapper.xml
+  type-aliases-package: com.suixingpay.patent.entity

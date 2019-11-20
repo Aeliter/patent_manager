@@ -1,11 +1,8 @@
 package com.suixingpay.tp.service;
 
 import com.suixingpay.patent.entity.User;
-
-import java.util.List;
+import org.apache.ibatis.annotations.Param;
 
 public interface UserService {
-
-    List<User> get();
-
+    User login(@Param("userStaff") String userStaff, @Param("passWord") String passWord);
 }
