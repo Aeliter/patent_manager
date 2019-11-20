@@ -1,4 +1,4 @@
-package com.suixingpay.patent.log.logvalue;
+package com.suixingpay.log.logvalue;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;

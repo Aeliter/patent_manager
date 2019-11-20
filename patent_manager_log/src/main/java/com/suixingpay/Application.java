@@ -1,4 +1,4 @@
-package com.suixingpay.patent;
+package com.suixingpay;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
