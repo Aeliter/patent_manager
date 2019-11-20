@@ -22,4 +22,9 @@ public class PatentServiceImpl implements PatentService {
 	public void insertPatent(Patent patent) {
 		patentRepository.insertPatent(patent);
 	}
+
+	@Override
+	public Patent selectPatentAndProcessById(Integer id) throws Exception {
+		return patentRepository.selectPatentAndProcessById(id);
+	}
 }

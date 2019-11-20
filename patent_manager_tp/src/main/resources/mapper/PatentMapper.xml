@@ -1,8 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.suixingpay.tp.service.PatentService.PatentMapper" >
-
-    <resultMap id="BaseResultMap" type="com.suixingpay.patent.entity.Patent" >
+<mapper namespace="com.suixingpay.tp.mapper.PatentMapper">
+    <resultMap id="patentMap" type="com.suixingpay.patent.entity.Patent" >
         <id column="patent_id" property="patentId" jdbcType="BIGINT" />
         <result column="patent_name" property="patentName" jdbcType="VARCHAR" />
         <result column="patent_number" property="patentNumber" jdbcType="CHAR" />
@@ -16,96 +15,19 @@
         <result column="patent_law_state" property="patentLawState" jdbcType="INTEGER" />
         <result column="patent_comment" property="patentComment" jdbcType="VARCHAR" />
         <result column="patent_state" property="patentState" jdbcType="INTEGER" />
+        <collction property="process" ofType=""></collction>
     </resultMap>
 
     <sql id="Base_Column_List" >
         `patent_id`,`patent_name`,`patent_number`,`patent_batch`,`patent_request_number`,`patent_date`,`user_id_technology`,`user_id_new`,`patent_applicant`,`patent_type`,`patent_law_state`,`patent_comment`,`patent_state`
     </sql>
 
-    <insert id="insertPatent" parameterType="com.suixingpay.patent.entity.Patent" >
-        insert into `pm_patent`
-        <trim prefix="(" suffix=")" suffixOverrides="," >
-            <if test="patentId != null" >
-                `patent_id`,
-            </if>
-            <if test="patentName != null" >
-                `patent_name`,
-            </if>
-            <if test="patentNumber != null" >
-                `patent_number`,
-            </if>
-            <if test="patentBatch != null" >
-                `patent_batch`,
-            </if>
-            <if test="patentRequestNumber != null" >
-                `patent_request_number`,
-            </if>
-            <if test="patentDate != null" >
-                `patent_date`,
-            </if>
-            <if test="userIdTechnology != null or userIdTechnology == 0" >
-                `user_id_technology`,
-            </if>
-            <if test="userIdNew != null or userIdNew == 0" >
-                `user_id_new`,
-            </if>
-            <if test="patentApplicant != null" >
-                `patent_applicant`,
-            </if>
-            <if test="patentType != null or patentType == 0" >
-                `patent_type`,
-            </if>
-            <if test="patentLawState != null or patentLawState == 0" >
-                `patent_law_state`,
-            </if>
-            <if test="patentComment != null" >
-                `patent_comment`,
-            </if>
-            <if test="patentState != null or patentState == 0" >
-                `patent_state`,
-            </if>
-        </trim>
-        <trim prefix="values (" suffix=")" suffixOverrides="," >
-            <if test="patentId != null" >
-                #{patentId,jdbcType=BIGINT},
-            </if>
-            <if test="patentName != null" >
-                #{patentName,jdbcType=VARCHAR},
-            </if>
-            <if test="patentNumber != null" >
-                #{patentNumber,jdbcType=CHAR},
-            </if>
-            <if test="patentBatch != null" >
-                #{patentBatch,jdbcType=CHAR},
-            </if>
-            <if test="patentRequestNumber != null" >
-                #{patentRequestNumber,jdbcType=CHAR},
-            </if>
-            <if test="patentDate != null" >
-                #{patentDate,jdbcType=TIMESTAMP},
-            </if>
-            <if test="userIdTechnology != null or userIdTechnology == 0" >
-                #{userIdTechnology,jdbcType=INTEGER},
-            </if>
-            <if test="userIdNew != null or userIdNew == 0" >
-                #{userIdNew,jdbcType=INTEGER},
-            </if>
-            <if test="patentApplicant != null" >
-                #{patentApplicant,jdbcType=VARCHAR},
-            </if>
-            <if test="patentType != null or patentType == 0" >
-                #{patentType,jdbcType=INTEGER},
-            </if>
-            <if test="patentLawState != null or patentLawState == 0" >
-                #{patentLawState,jdbcType=INTEGER},
-            </if>
-            <if test="patentComment != null" >
-                #{patentComment,jdbcType=VARCHAR},
-            </if>
-            <if test="patentState != null or patentState == 0" >
-                #{patentState,jdbcType=INTEGER},
-            </if>
-        </trim>
-    </insert>
+    <select id="selectPatentAndProcessById" parameterType="int" resultMap="patentMap">
+
+    </select>
+
+    <select id="insertPatent">
+
+    </select>
 
 </mapper>
