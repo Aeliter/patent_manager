@@ -55,6 +55,10 @@
         <result column="user_department" property="userDepartment" jdbcType="INTEGER"/>
     </resultMap>
 
+    <select id="getUpdataUser" resultType="com.suixingpay.entity.User">
+
+
+    </select>
 
 
 </mapper>
