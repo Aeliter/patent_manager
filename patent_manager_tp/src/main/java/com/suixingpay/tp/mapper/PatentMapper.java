@@ -6,6 +6,6 @@ import org.apache.ibatis.annotations.Mapper;
 @Mapper
 public interface PatentMapper {
 
-	void insertPatent(Patent patent);
+	boolean insertPatent(Patent patent);
 
 }

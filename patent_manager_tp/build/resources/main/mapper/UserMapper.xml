@@ -18,7 +18,7 @@
         `user_id`,`user_name`,`user_password`,`user_staff`,`user_phone`,`user_email`,`user_sex`,`user_state`,`user_role`,`user_department`
     </sql>
 
-    <select id="get" resultMap="BaseResultMap">
+    <select id="get" resultType="com.suixingpay.patent.entity.User">
         select
             <include refid="Base_Column_List" />
         from

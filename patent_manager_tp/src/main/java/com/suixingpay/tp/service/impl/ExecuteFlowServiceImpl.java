@@ -1,5 +1,6 @@
 package com.suixingpay.tp.service.impl;
 
+import com.suixingpay.log.logvalue.LogValue;
 import com.suixingpay.patent.entity.NodeLink;
 import com.suixingpay.patent.entity.Patent;
 import com.suixingpay.patent.entity.Process;
@@ -28,11 +29,18 @@ public class ExecuteFlowServiceImpl implements ExecuteFlowService {
         try{
             //获取当前专利所在流程表的最新位置（根据专利id）
             Process process = processMapper.getProcessById(patent.getPatentId());
-            //根据流程的状态获取到下一个节点
-            NodeLink nextNode = linkMapper.getNextNode(process.getProcessState(), status);
-            //更改当前专利的状态及时间（将记录插入到数据库中）
-            process.setProcessTime(new Date());
-            process.setProcessState(Integer.parseInt(nextNode.getAfterNodeLink().toString()));
+            if(process==null){
+                process = new Process();
+                process.setPatentId(patent.getPatentId());
+                process.setProcessState(status);
+                process.setProcessTime(new Date());
+            }else {
+                //根据流程的状态获取到下一个节点
+                NodeLink nextNode = linkMapper.getNextNode(process.getProcessState(), status);
+                //更改当前专利的状态及时间（将记录插入到数据库中）
+                process.setProcessTime(new Date());
+                process.setProcessState(Integer.parseInt(nextNode.getAfterNodeLink().toString()));
+            }
             //插入流程
             boolean bool = processMapper.insertProcess(process);
         }catch(Exception e){

@@ -11,6 +11,8 @@ dependencies {
     compile project (':patent_manager_entity')
     //添加工具包
     compile project (':patent_manager_tools')
+    //添加日志模块
+    compile project (':patent_manager_log')
     //添加验证码工具包
     compile 'com.github.penggle:kaptcha:2.3.2'
 }

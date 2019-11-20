@@ -4,5 +4,7 @@ import com.suixingpay.patent.entity.Patent;
 
 public interface PatentService {
 
-	void insertPatent(Patent patent);
+	boolean insertPatent(Patent patent);
+	boolean submitPatent(Long id);
+	boolean test(long patentId, int status);
 }

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.suixingpay.tp.service.PatentService.PatentMapper" >
-
+<mapper namespace="com.suixingpay.tp.mapper.PatentMapper" >
     <resultMap id="BaseResultMap" type="com.suixingpay.patent.entity.Patent" >
         <id column="patent_id" property="patentId" jdbcType="BIGINT" />
         <result column="patent_name" property="patentName" jdbcType="VARCHAR" />
@@ -22,7 +21,7 @@
         `patent_id`,`patent_name`,`patent_number`,`patent_batch`,`patent_request_number`,`patent_date`,`user_id_technology`,`user_id_new`,`patent_applicant`,`patent_type`,`patent_law_state`,`patent_comment`,`patent_state`
     </sql>
 
-    <insert id="insertPatent" parameterType="com.suixingpay.patent.entity.Patent" >
+    <insert id="insertPatent"  useGeneratedKeys="true" keyProperty="patentId" parameterType="com.suixingpay.patent.entity.Patent" >
         insert into `pm_patent`
         <trim prefix="(" suffix=")" suffixOverrides="," >
             <if test="patentId != null" >
