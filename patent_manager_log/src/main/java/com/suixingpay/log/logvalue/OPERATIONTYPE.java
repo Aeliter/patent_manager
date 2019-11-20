@@ -1,4 +1,4 @@
-package com.suixingpay.patent.log.logvalue;
+package com.suixingpay.log.logvalue;
 
 public enum OPERATIONTYPE {
 

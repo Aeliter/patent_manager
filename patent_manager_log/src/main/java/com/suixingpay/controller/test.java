@@ -1,14 +1,9 @@
-package com.suixingpay.patent.controller;
+package com.suixingpay.controller;
 
-import com.suixingpay.patent.log.logvalue.LogValue;
-import com.suixingpay.patent.service.TestService;
+import com.suixingpay.service.TestService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;

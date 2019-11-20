@@ -1,9 +1,9 @@
-package com.suixingpay.patent.log.logaop;
+package com.suixingpay.log.logaop;
 
-import com.suixingpay.patent.entity.Log;
-import com.suixingpay.patent.entity.User;
-import com.suixingpay.patent.log.logvalue.LogValue;
-import com.suixingpay.patent.log.mapper.LogMapper;
+import com.suixingpay.log.logvalue.LogValue;
+import com.suixingpay.log.mapper.LogMapper;
+import com.suixingpay.entity.Log;
+import com.suixingpay.entity.User;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.After;
@@ -14,7 +14,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
-import org.springframework.web.method.HandlerMethod;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -29,7 +28,7 @@ public class LogAOP{
 
     private Log logData;
 
-    @Pointcut(value = "@annotation(com.suixingpay.patent.log.logvalue.LogValue) && @annotation(org.springframework.transaction.annotation.Transactional)")
+    @Pointcut(value = "@annotation(com.suixingpay.log.logvalue.LogValue) && @annotation(org.springframework.transaction.annotation.Transactional)")
     public void setLogData() {
 
     }
