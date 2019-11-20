@@ -8,5 +8,19 @@ public enum OPERATIONTYPE {
 
     DELETE,
 
-    INSERT
+    INSERT;
+
+    public String getString() {
+        switch (this) {
+            case NULLTYPE:
+                return "NULLTYPE";
+            case INSERT:
+                return "INSERT";
+            case UPDATA:
+                return "UPDATA";
+            case DELETE:
+                return "DELETE";
+        }
+        return "NULLTYPE";
+    }
 }

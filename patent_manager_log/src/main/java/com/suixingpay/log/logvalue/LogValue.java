@@ -26,7 +26,7 @@ public @interface LogValue{
     * DELETE,
     * INSERT
      */
-    OPERATIONTYPE[] TYPE() default OPERATIONTYPE.NULLTYPE;
+    OPERATIONTYPE TYPE() default OPERATIONTYPE.NULLTYPE;
 
     /*
      *当type为updata时，可以配置entityValue的个数，必须和entityValue对应
@@ -35,5 +35,10 @@ public @interface LogValue{
      * 实体类中包含应有的key
      */
     int value() default 0;
+
+    /*
+    *程序附加的信息
+     */
+    String message() default "null";
 
 }
