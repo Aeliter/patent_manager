@@ -10,6 +10,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/patent_manager_entity" />
+            <option value="$PROJECT_DIR$/patent_manager_log" />
             <option value="$PROJECT_DIR$/patent_manager_node" />
             <option value="$PROJECT_DIR$/patent_manager_process" />
             <option value="$PROJECT_DIR$/patent_manager_tools" />
