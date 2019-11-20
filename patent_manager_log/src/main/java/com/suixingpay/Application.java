@@ -5,7 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@MapperScan("com.suixingpay.patent.log.mapper")
+@MapperScan("com.suixingpay.log.mapper")
 public class Application {
 
     public static void main(String[] args) {

@@ -56,8 +56,9 @@
     </resultMap>
 
     <select id="getUpdataUser" resultType="com.suixingpay.entity.User">
-
-
+        select user_name, user_staff, user_phone, user_email, user_sex, user_state, user_role, user_department
+        from pm_user
+        where userStaff = #{userStaff}
     </select>
 
 
